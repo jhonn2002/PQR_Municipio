@@ -22,17 +22,17 @@
         <div class="row borde justify-content-center align-items-center border " style=" box-shadow: 0px 4px 5px #55575a;" >
             <div class="col-md-12 col-xs-12 col-sm-12">
                 <br>
-                <h3 class="text-center">Puedes elegir como realizar la PQR</h3> <br> 
+                <h3 class="text-center">Puedes elegir como realizar la PQR</h3> <br>
             </div>
-            
+
             <div class=" col-md-3 col-xs-3 col-sm-3">
                 <div class="card d-flex align-items-center " style="width: 15rem; box-shadow: 0px 4px 5px #55575a;">
                     <img class="img-fluid" style="width:200px;" src="../static/recursos/index/pqrd.jpg"
                     alt="Responsive image">
                     <div class="card-body">
-                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQ">PQR</button>	
+                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQ">PQR</button>
                     </div>
-                </div>              
+                </div>
             </div>
 
             <div class=" col-md-3 col-xs-3 col-sm-3">
@@ -40,11 +40,11 @@
                     <img class="img-fluid" style="width:200px;" src="../static/recursos/index/pqrAnonima.jpg"
                     alt="Responsive image">
                     <div class="card-body">
-                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQAnonima">PQR Anónima</button>	
+                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQAnonima">PQR Anónima</button>
                     </div>
-                </div>              
-            </div>  <br>     
-            
+                </div>
+            </div>  <br>
+
             <!-- Como funciona -->
             <div class="col-md-12 col-xs-12 col-sm-12">
                 <br><br>
@@ -95,11 +95,13 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title h5Llenar" style="font-size: 25px;" id="Modaliniciar" >Registro de PQR</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                     <div class="modal-body">
                         <div class="col-md-12 contaiener border" style=" box-shadow: 0px 4px 5px #55575a;">
-                            <div class="container"> 
+                            <div class="container">
                                 <br>
                                 <div class="row justify-content-center">
                                 <h5 class="h5Llenar">Diligenciar la siguiente información</h5>
@@ -118,7 +120,7 @@
                                                 <option value="R">Reclamo</option>
                                             </select>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <div class="col-md-6">
                                         <label class="form-label m-1"><strong>Nombre completo</strong></label>
                                         <div class="input-group mb-3 p-1">
@@ -126,10 +128,10 @@
                                             <input type="text" class="form-control" style="border: 1px solid #aaa;" placeholder="Nombres" id="txtNombre"
                                                 name="txtNombre" >
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
 
-                                <div class="row " >   
+                                <div class="row " >
                                     <div class="col-md-6">
                                         <label class="form-label m-1"><strong>Correo Electrónico</strong></label>
                                         <div class="input-group mb-3 p-1">
@@ -137,16 +139,16 @@
                                             <input type="email" class="form-control" style="border: 1px solid #aaa;" placeholder="Correo" id="txtCorreoSolicitud"
                                                 name="txtCorreoSolicitud" >
                                         </div>
-                                    </div>   
+                                    </div>
 
                                     <div class="col-md-6">
                                         <label class="form-label m-1"><strong>Subir Archivo</strong></label>
                                         <div class="input-group mb-3 p-1">
                                             <input type="file" name="fileArchivo" id="fileArchivo" value="" class="form-control">
                                         </div>
-                                    </div> 
+                                    </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <label class="form-label m-1"><strong>Descripción de la silicitud *</strong> </label>
@@ -163,11 +165,11 @@
                         <div class="col-md-12">
                             <div style="text-align: center;">
                                     <button type="button" class="btn submit-btn" id="btnEnviarSolicitud" style="width: 30%;">Enviar solicitud</button>
-                            </div>                                       
+                            </div>
                         </div>
                         <div >
                             <input type="hidden" id="formaSolicitud" value="">
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,5 +179,5 @@
 
 
 
-   
+
 {% endblock %}
