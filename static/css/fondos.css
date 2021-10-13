@@ -1,0 +1,14 @@
+.body1 {
+    margin: 0;
+    background: url('../recursos/fondoLogReg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.body2 {
+    margin: 0;
+    background: url('../recursos/laptop.png');
+    background-size: cover;
+    background-attachment: fixed;
+}

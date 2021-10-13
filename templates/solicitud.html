@@ -1,0 +1,181 @@
+{% extends "index.html" %}
+{% block section %}
+
+
+
+
+    <br>
+    <div class="container " >
+        <div class="row justify-content-center"style=" box-shadow: 0px 4px 5px #55575a;">
+            <div class="col-md-12 "style=" box-shadow: 0px 2px 3px #55575a;" >
+                <br>
+                <h2 class="h2Nombre">Bienvenido al sistema de solicitudes, quejas y reclamos
+                    de la Alcaldía Buena vida
+                </h2>
+                <!-- <h3 class="h3Nombre">Alcaldía BuenaVida</h3> -->
+                <br>
+            </div>
+            <br>
+        </div>
+
+        <!-- Elegir PQR -->
+        <div class="row borde justify-content-center align-items-center border " style=" box-shadow: 0px 4px 5px #55575a;" >
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <br>
+                <h3 class="text-center">Puedes elegir como realizar la PQR</h3> <br> 
+            </div>
+            
+            <div class=" col-md-3 col-xs-3 col-sm-3">
+                <div class="card d-flex align-items-center " style="width: 15rem; box-shadow: 0px 4px 5px #55575a;">
+                    <img class="img-fluid" style="width:200px;" src="../static/recursos/index/pqrd.jpg"
+                    alt="Responsive image">
+                    <div class="card-body">
+                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQ">PQR</button>	
+                    </div>
+                </div>              
+            </div>
+
+            <div class=" col-md-3 col-xs-3 col-sm-3">
+                <div class="card d-flex align-items-center " style="width: 15rem; box-shadow: 0px 4px 5px #55575a;">
+                    <img class="img-fluid" style="width:200px;" src="../static/recursos/index/pqrAnonima.jpg"
+                    alt="Responsive image">
+                    <div class="card-body">
+                    <button type="button" class="btn submit-btn" style="width: 100%" id="btnPRQAnonima">PQR Anónima</button>	
+                    </div>
+                </div>              
+            </div>  <br>     
+            
+            <!-- Como funciona -->
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <br><br>
+                <h3 class="text-center">¿Cómo funciona?</h3>
+            </div>
+            <div class=" col-md-3 col-xs-3 col-sm-3">
+                <div class="bg-transparent p-2 text-center " style="max-width:100%; height:auto;">
+                    <img class="img-fluid " style="width:130px"
+                        src="../static/recursos/index/elegir.jpg" alt="Responsive image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center ">Elige una opción</h5>
+                        <p class="card-text text-center ">Puedes realizar tu PQR de manera anónima o con tu correo</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-xs-3 col-sm-3">
+                <div class="bg-transparent p-2 text-center" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid " style="width:130px" src="../static/recursos/index/recibir.jpg"
+                        alt="Responsive image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Recibirás un código</h5>
+                        <p class="card-text text-center">Al realizar la PQR se generará un código único que identificará la solicitud.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-3 col-sm-3">
+                <div class="bg-transparent p-2 text-center" style="max-width: 100%; height: auto;">
+                    <img class="img-fluid " style="width:130px"
+                        src="../static/recursos/index/consultar.jpg" alt="Responsive image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Consulta</h5>
+                        <p class="card-text text-center">Con el código podrás consultar la respuesta a la PQR, o en su defencto te llegará al correo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <br>
+
+
+
+
+    <!-- MODAL PETICIONES QUEJAS Y RECLAMOS-->
+
+    <form id="frmModalSolicitud" method="POST" action="">
+        <div class="modal" id="modalpqr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title h5Llenar" style="font-size: 25px;" id="Modaliniciar" >Registro de PQR</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-12 contaiener border" style=" box-shadow: 0px 4px 5px #55575a;">
+                            <div class="container"> 
+                                <br>
+                                <div class="row justify-content-center">
+                                <h5 class="h5Llenar">Diligenciar la siguiente información</h5>
+                                <br><br>
+                                </div>
+                                <div class="row " >
+                                    <div class="col-md-6 ">
+                                        <label class="form-label m-1"><strong>Tipo de Solicitud *</strong></label>
+                                        <div class="input-group mb-3 p-1">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-file"></i></span>
+                                            <select class="form-select " aria-label=".form-select-lg example" id="txtTipoSolicitud"
+                                                name="txtTipoSolicitud">
+                                                <option selected>Elija una opción</option>
+                                                <option value="P">Petición</option>
+                                                <option value="Q">Queja</option>
+                                                <option value="R">Reclamo</option>
+                                            </select>
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <label class="form-label m-1"><strong>Nombre completo</strong></label>
+                                        <div class="input-group mb-3 p-1">
+                                            <span class="input-group-text" id="basic-addon1"><i class="far fa-id-card"></i></span>
+                                            <input type="text" class="form-control" style="border: 1px solid #aaa;" placeholder="Nombres" id="txtNombre"
+                                                name="txtNombre" >
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="row " >   
+                                    <div class="col-md-6">
+                                        <label class="form-label m-1"><strong>Correo Electrónico</strong></label>
+                                        <div class="input-group mb-3 p-1">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                            <input type="email" class="form-control" style="border: 1px solid #aaa;" placeholder="Correo" id="txtCorreoSolicitud"
+                                                name="txtCorreoSolicitud" >
+                                        </div>
+                                    </div>   
+
+                                    <div class="col-md-6">
+                                        <label class="form-label m-1"><strong>Subir Archivo</strong></label>
+                                        <div class="input-group mb-3 p-1">
+                                            <input type="file" name="fileArchivo" id="fileArchivo" value="" class="form-control">
+                                        </div>
+                                    </div> 
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="form-label m-1"><strong>Descripción de la silicitud *</strong> </label>
+                                        <div class="input-group mb-3 p-1">
+                                            <textarea name="txtDescriopcion" id="txtDescriopcion" cols="100" rows="4"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            <div style="text-align: center;">
+                                    <button type="button" class="btn submit-btn" id="btnEnviarSolicitud" style="width: 30%;">Enviar solicitud</button>
+                            </div>                                       
+                        </div>
+                        <div >
+                            <input type="hidden" id="formaSolicitud" value="">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--FIN MODAL PETICIONES QUEJAS Y RECLAMOS-->
+
+
+
+   
+{% endblock %}
